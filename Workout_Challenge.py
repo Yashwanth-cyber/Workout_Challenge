@@ -324,13 +324,23 @@ def main():
                         })
             
             workout_df = pd.DataFrame(workout_data)
-            fig = px.bar(workout_df, 
-                        x='Member', 
-                        y='Count', 
-                        color='Workout',
-                        title='Workout Distribution by Member',
-                        barmode='group')
-            st.plotly_chart(fig, use_container_width=True)
+            
+            # Debugging: Check the contents of workout_df
+            st.write("Workout Data:", workout_df)
+            
+            # Only create the chart if workout_df is not empty
+            if not workout_df.empty:
+                fig = px.bar(workout_df, 
+                            x='Member', 
+                            y='Count', 
+                            color='Workout',
+                            title='Workout Distribution by Member',
+                            barmode='group')
+                st.plotly_chart(fig, use_container_width=True)
+            else:
+                st.warning("No workout data available for the selected date range.")
+        else:
+            st.warning("No entries found for the selected date range.")
     
     with tab3:
         st.header("🏆 Leaderboard & Achievements")
