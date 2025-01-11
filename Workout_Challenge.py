@@ -269,7 +269,6 @@ def main():
                         """,
                         unsafe_allow_html=True
                     )
-    
     with tab2:
         st.header("Statistics & Progress")
         
