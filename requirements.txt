@@ -1,5 +1,6 @@
-streamlit
-pandas
-numpy
-plotly
-Pillow
+streamlit==1.32.0
+pandas==2.1.4
+numpy==1.26.2
+plotly==5.18.0
+Pillow==10.1.0
+matplotlib==3.8.2
