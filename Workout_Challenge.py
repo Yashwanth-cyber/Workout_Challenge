@@ -375,4 +375,3 @@ def main():
 # Load data and run the app
 load_data()
 main()
-ss
